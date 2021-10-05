@@ -1,5 +1,3 @@
-'use strict'
-
 import { ALL_LANGUAGES, UNDEFINED_LANGUAGE, BOKMAAL, NORWEGIAN } from './LanguageConstants.mjs'
 const convertString = string => string !== null ? string.trim().toLowerCase() : ''
 

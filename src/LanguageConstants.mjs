@@ -1,5 +1,3 @@
-'use strict'
-
 import Language from './Language.mjs'
 
 export const ENGLISH = Language('en', ['eng'], 'eng', 'English', 'Engelsk', 'Engelsk', 'Eaŋgalsgiella')
