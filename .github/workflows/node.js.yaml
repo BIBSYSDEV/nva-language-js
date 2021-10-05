@@ -10,7 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: volta-cli/action@v1
-    - run: pwd && ls
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
