@@ -1,6 +1,6 @@
 'use strict'
 
-const { ALL_LANGUAGES, UNDEFINED_LANGUAGE, BOKMAAL, NORWEGIAN } = require('./LanguageConstants')
+import { ALL_LANGUAGES, UNDEFINED_LANGUAGE, BOKMAAL, NORWEGIAN } from './LanguageConstants.mjs'
 const convertString = string => string !== null ? string.trim().toLowerCase() : ''
 
 const mappedValue = language => {
@@ -41,7 +41,7 @@ const getLanguageBySamiName = name => mappedValue(
   ALL_LANGUAGES.find(language => convertString(name).match(new RegExp(language.sme.toLowerCase())))
 )
 
-module.exports = {
+export {
   getLanguageByIso6391Code,
   getLanguageByIso6392Code,
   getLanguageByIso6393Code,

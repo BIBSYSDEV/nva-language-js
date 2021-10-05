@@ -1,6 +1,6 @@
 'use strict'
 
-const Language = (iso6391Code, iso6392Code, iso6393Code, eng, nob, nno, sme) => {
+export default (iso6391Code, iso6392Code, iso6393Code, eng, nob, nno, sme) => {
   return {
     uri: `http://lexvo.org/id/iso639-3/${iso6393Code}`,
     iso6391Code: iso6391Code,
@@ -12,5 +12,3 @@ const Language = (iso6391Code, iso6392Code, iso6393Code, eng, nob, nno, sme) => 
     sme: sme
   }
 }
-
-module.exports = Language
