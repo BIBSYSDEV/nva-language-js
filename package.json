@@ -1,0 +1,34 @@
+{
+  "name": "nva-language",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .js",
+    "lint:fix": "npm run lint -- --fix",
+    "mocha": "mocha --full-trace \"src/tests/**/*.js\"",
+    "test": "npm run lint && npm run mocha",
+    "coverage": "nyc --reporter=cobertura --reporter=text --reporter=html npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BIBSYSDEV/nva-publication-channels.git"
+  },
+  "keywords": [
+    "NVA language mapper"
+  ],
+  "author": "Rurik Thomas Greenall",
+  "license": "MIT",
+  "volta": {
+    "node": "14.18.0",
+    "npm": "7.24.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "mocha": "^9.1.2",
+    "nyc": "^15.1.0"
+  }
+}
