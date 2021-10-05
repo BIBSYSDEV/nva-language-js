@@ -12,31 +12,31 @@ const mappedValue = language => {
 }
 
 const getLanguageByIso6391Code = code => mappedValue(
-  ALL_LANGUAGES.find(language => convertString(code).match(language.iso6391Code))
+  ALL_LANGUAGES.find(language => convertString(code) === language.iso6391Code)
 )
 
 const getLanguageByIso6392Code = code => mappedValue(
-  ALL_LANGUAGES.find(language => language.iso6392Codes.find(variant => convertString(code).match(variant)))
+  ALL_LANGUAGES.find(language => language.iso6392Codes.find(variant => convertString(code) === variant))
 )
 
 const getLanguageByIso6393Code = code => mappedValue(
-  ALL_LANGUAGES.find(language => convertString(code).match(language.iso6393Code))
+  ALL_LANGUAGES.find(language => convertString(code) === language.iso6393Code)
 )
 
 const getLanguageByEnglishName = name => mappedValue(
-  ALL_LANGUAGES.find(language => convertString(name).match(new RegExp(language.eng.toLowerCase())))
+  ALL_LANGUAGES.find(language => convertString(name) === language.eng.toLowerCase())
 )
 
 const getLanguageByBokmaalName = name => mappedValue(
-  ALL_LANGUAGES.find(language => convertString(name).match(new RegExp(language.nob.toLowerCase())))
+  ALL_LANGUAGES.find(language => convertString(name) === language.nob.toLowerCase())
 )
 
 const getLanguageByNynorskName = name => mappedValue(
-  ALL_LANGUAGES.find(language => convertString(name).match(new RegExp(language.nno.toLowerCase())))
+  ALL_LANGUAGES.find(language => convertString(name) === language.nno.toLowerCase())
 )
 
 const getLanguageBySamiName = name => mappedValue(
-  ALL_LANGUAGES.find(language => convertString(name).match(new RegExp(language.sme.toLowerCase())))
+  ALL_LANGUAGES.find(language => convertString(name) === language.sme.toLowerCase())
 )
 
 export {
