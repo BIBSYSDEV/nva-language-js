@@ -1,9 +1,9 @@
 {
   "name": "nva-language",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "./dist/LanguageMapper.js",
-  "module": "./src/languageMapper.mjs",
+  "module": "./src/LanguageMapper.mjs",
   "scripts": {
     "lint": "eslint . --ext .mjs --ext .js",
     "lint:fix": "npm run lint -- --fix",
