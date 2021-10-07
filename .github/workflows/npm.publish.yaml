@@ -11,9 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: volta-cli/action@v1.7.0
-      - run: |
-        npm install
-        npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-        npm publish --ignore-scripts
+      - name: Publishing steps
+        run: |
+          npm install
+          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+          npm publish --ignore-scripts
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
