@@ -4,7 +4,10 @@ import {
   getLanguageByEnglishName,
   getLanguageByIso6391Code,
   getLanguageByIso6392Code,
-  getLanguageByIso6393Code, getLanguageByNynorskName, getLanguageBySamiName
+  getLanguageByIso6393Code,
+  getLanguageByNynorskName,
+  getLanguageBySamiName,
+  getLanguageByUri
 } from '../LanguageMapper.mjs'
 import { ALL_LANGUAGES, BOKMAAL, ENGLISH, GERMAN, UNDEFINED_LANGUAGE } from '../LanguageConstants.mjs'
 import chai from 'chai'
@@ -51,5 +54,13 @@ describe('String values exist', () => {
     [null, '', '  ', '\t', '\r\n'].forEach(input => {
       expect(getLanguageByIso6391Code(input)).to.equal(UNDEFINED_LANGUAGE)
     })
+  })
+
+  it('should return language when input is valid URI', () => {
+    expect(getLanguageByUri('http://lexvo.org/id/iso639-3/eng')).to.equal(ENGLISH)
+  })
+
+  it('should return undefined when input is unknown URI', () => {
+    expect(getLanguageByUri('http://example.org/spambot')).to.equal(UNDEFINED_LANGUAGE)
   })
 })

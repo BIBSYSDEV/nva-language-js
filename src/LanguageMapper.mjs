@@ -1,4 +1,5 @@
 import { ALL_LANGUAGES, UNDEFINED_LANGUAGE, BOKMAAL, NORWEGIAN } from './LanguageConstants.mjs'
+
 const convertString = string => string !== null ? string.trim().toLowerCase() : ''
 
 const mappedValue = language => {
@@ -37,6 +38,10 @@ const getLanguageByNynorskName = name => mappedValue(
 
 const getLanguageBySamiName = name => mappedValue(
   ALL_LANGUAGES.find(language => convertString(name) === language.sme.toLowerCase())
+)
+
+export const getLanguageByUri = (uri) => mappedValue(
+  ALL_LANGUAGES.find(language => convertString(uri) === language.uri)
 )
 
 export {
