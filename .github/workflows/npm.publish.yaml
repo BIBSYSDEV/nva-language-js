@@ -11,9 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: volta-cli/action@v1.7.0
-        with:
-          registry-url: https://registry.npmjs.org/
-      - run: npm install
-      - run: npm run publish --access public
+      - run: |
+        npm install
+        npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+        npm publish --ignore-scripts
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
