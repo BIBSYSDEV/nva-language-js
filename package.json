@@ -11,7 +11,7 @@
     "test": "npm run lint && npm run mocha",
     "coverage": "c8 --all npm run test && c8 check-coverage --lines 100 --functions 100 --branches 100 && c8 report",
     "build": "npm run test && babel src -d dist",
-    "publish": "npm run build && npm publish ./"
+    "publish": "npm run build && npm publish ./ --access public"
   },
   "repository": {
     "type": "git",
