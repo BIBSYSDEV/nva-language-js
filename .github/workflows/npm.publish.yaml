@@ -1,0 +1,19 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: volta-cli/action@v1.7.0
+        with:
+          registry-url: https://registry.npmjs.org/
+      - run: npm install
+      - run: npm run publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
