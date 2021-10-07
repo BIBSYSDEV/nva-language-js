@@ -1,6 +1,6 @@
 {
   "name": "nva-language",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "./dist/LanguageMapper.js",
   "module": "./src/LanguageMapper.mjs",
@@ -29,6 +29,7 @@
     "@babel/cli": "^7.15.7",
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
+    "babel-plugin-replace-import-extension": "^1.1.1",
     "c8": "^7.9.0",
     "chai": "^4.3.4",
     "eslint-config-standard": "^16.0.3",
