@@ -2,7 +2,7 @@
   "name": "nva-language",
   "version": "1.0.0",
   "description": "",
-  "main": "LanguageMapper",
+  "main": "./dist/LanguageMapper.js",
   "type": "module",
   "scripts": {
     "lint": "eslint . --ext .mjs --ext .js",
@@ -10,7 +10,8 @@
     "mocha": "mocha --full-trace \"src/tests/**/*.js\"",
     "test": "npm run lint && npm run mocha",
     "coverage": "c8 --all npm run test && c8 check-coverage --lines 100 --functions 100 --branches 100 && c8 report",
-    "build": "npm run test && babel src -d dist"
+    "build": "npm run test && babel src -d dist",
+    "publish": "npm run build && npm publish ./"
   },
   "repository": {
     "type": "git",
