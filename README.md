@@ -46,14 +46,14 @@ All functions return a language object, which has the structure:
 
 The properties are structured as follows:
 
-- uri: a Lexvo ISO 639-3 uri
-- iso6391Code: an ISO 639-1, two-letter code
-- iso6392Codes: an array containing ISO 639-2 B/T three-letter codes (min one, max. two items)
-- iso6393Code: an ISO 639-3 code
-- eng: the English name of the language
-- nob: the Norwegian Bokmål name of the language
-- nno: the Norwegian Nynorsk name of the language
-- sme: the Northern Sami name of the language
+-   uri: a Lexvo ISO 639-3 uri
+-   iso6391Code: an ISO 639-1, two-letter code
+-   iso6392Codes: an array containing ISO 639-2 B/T three-letter codes (min one, max. two items)
+-   iso6393Code: an ISO 639-3 code
+-   eng: the English name of the language
+-   nob: the Norwegian Bokmål name of the language
+-   nno: the Norwegian Nynorsk name of the language
+-   sme: the Northern Sami name of the language
 
 ## Available functions
 
