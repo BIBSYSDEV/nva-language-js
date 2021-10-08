@@ -81,7 +81,7 @@ There are a number of methods provided by nva-language, all of which return a La
   - Given an ISO 639-1 code, returns a Language object that either matches the token, or is the Undefined language
   - Matching is not case-sensitive
 - getLanguageByNynorskName
-  - example: `const english = getLanguageByNynorskName('Englesk')`
+  - example: `const english = getLanguageByNynorskName('Engelsk')`
   - Given a Norwegian Nynorsk token for a language, say "Engelsk", returns a Language object that either matches the token, or is the Undefined language
   - Matching is not case-sensitive
   - The only difference between getLanguageByNynorskName and getLanguageByBokmaalName is Bokmål: "Flere språk", Nynorsk "Fleire språk"
