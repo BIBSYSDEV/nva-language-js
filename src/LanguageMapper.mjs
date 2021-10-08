@@ -2,17 +2,13 @@ import { ALL_LANGUAGES, UNDEFINED_LANGUAGE, BOKMAAL, NORWEGIAN, MISCELLANEOUS, M
 
 const convertString = string => string !== null ? string.trim().toLowerCase() : ''
 
+const replaceNorwegian = language => NORWEGIAN === language ? BOKMAAL : language
+const replaceMiscellaneous = language => MISCELLANEOUS === language ? MULTIPLE : language
+
 const mappedValue = language => {
-  if (language === null || language === undefined) {
-    return UNDEFINED_LANGUAGE
-  }
-  if (NORWEGIAN === language) {
-    return BOKMAAL
-  }
-  if (MISCELLANEOUS === language) {
-    return MULTIPLE
-  }
-  return language
+  return (language === null || language === undefined)
+    ? UNDEFINED_LANGUAGE
+    : replaceNorwegian(replaceMiscellaneous(language))
 }
 
 export const getLanguageByIso6391Code = code => mappedValue(
