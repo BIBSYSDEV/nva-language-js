@@ -62,7 +62,7 @@ There are a number of methods provided by nva-language, all of which return a La
 -   getLanguageByBokmaalName
     -   example: `const english = getLanguageByBokmaalName('Engelsk')`
     -   Given a Norwegian Bokmål token for a language, say "Engelsk", returns a Language object that either matches the token, or is the Undefined language
-    -   Matching is not case-sensitive
+    -   Matching is not case–sensitive
 -   getLanguageByEnglishName
     -   example: `const english = getLanguageByEnglishName('English')`
     -   Given a Norwegian Bokmål token for a language, say "English", returns a Language object that either matches the token, or is the Undefined language
@@ -84,7 +84,7 @@ There are a number of methods provided by nva-language, all of which return a La
     -   example: `const english = getLanguageByNynorskName('Engelsk')`
     -   Given a Norwegian Nynorsk token for a language, say "Engelsk", returns a Language object that either matches the token, or is the Undefined language
     -   Matching is not case-sensitive
-    -   The only difference between getLanguageByNynorskName and getLanguageByBokmaalName is Bokmål: "Flere språk", Nynorsk "Fleire språk"
+    -   The only difference between getLanguageByNynorskName and getLanguageByBokmaalName is Bokmål "Flere språk", Nynorsk "Fleire språk"
 -   getLanguageBySamiName
     -   example: `const english = getLanguageBySamiName('Eaŋgalsgiella')`
     -   Given a Northern Sami token for a language, say "Eaŋgalsgiella", returns a Language object that either matches the token, or is the Undefined language
