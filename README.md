@@ -113,4 +113,4 @@ Since the primary source for the data for this module has been NSD DBH's publica
 
 ### More than one language
 
-We use the ISO 639-3 `mul` code for these cases, which is preferred over the sometimes used `mis` code.
+We use the ISO 639-3 `mul` code for these cases, which replaces the sometimes-used `mis` code if provided as input.
