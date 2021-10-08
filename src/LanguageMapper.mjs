@@ -1,4 +1,4 @@
-import { ALL_LANGUAGES, UNDEFINED_LANGUAGE, BOKMAAL, NORWEGIAN } from './LanguageConstants.mjs'
+import { ALL_LANGUAGES, UNDEFINED_LANGUAGE, BOKMAAL, NORWEGIAN, MISCELLANEOUS, MULTIPLE } from './LanguageConstants.mjs'
 
 const convertString = string => string !== null ? string.trim().toLowerCase() : ''
 
@@ -8,6 +8,9 @@ const mappedValue = language => {
   }
   if (NORWEGIAN === language) {
     return BOKMAAL
+  }
+  if (MISCELLANEOUS === language) {
+    return MULTIPLE
   }
   return language
 }
