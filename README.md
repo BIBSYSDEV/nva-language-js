@@ -9,7 +9,7 @@ NVA-language also routes non-preferred representations to preferred representati
 
 Install with either:
 
-```const nvaLanguage = require('nvaa-language)```
+```const nvaLanguage = require('nva-language)```
 
 or
 
