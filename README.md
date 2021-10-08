@@ -9,13 +9,23 @@ NVA-language also routes non-preferred representations to preferred representati
 
 Install with either:
 
-```const nvaLanguage = require('nva-language)```
+```
+    const { <function(s)> } = require('nva-language)
+```
 
 or
 
-```import { <function(s)> }  from 'nva-language' ```
+```
+    import { <function(s)> }  from 'nva-language'
+```
 
 (replace <function(s)> with the functions you actually use, see below).
+
+Use with:
+
+```
+    const english = getLanguageByBokmaalName('Engelsk')
+```
 
 ## The language object
 
