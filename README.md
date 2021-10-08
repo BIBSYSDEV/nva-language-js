@@ -60,7 +60,7 @@ The properties are structured as follows:
 There are a number of methods provided by nva-language, all of which return a Language object, these have self-explanatory names:
 
 - getLanguageByBokmaalName
-  - example: `const english = getLanguageByBokmaalName('Englesk')`
+  - example: `const english = getLanguageByBokmaalName('Engelsk')`
   - Given a Norwegian Bokmål token for a language, say "Engelsk", returns a Language object that either matches the token, or is the Undefined language
   - Matching is not case-sensitive
 - getLanguageByEnglishName
