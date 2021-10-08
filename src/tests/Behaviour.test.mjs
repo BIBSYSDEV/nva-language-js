@@ -9,7 +9,7 @@ import {
   getLanguageBySamiName,
   getLanguageByUri
 } from '../LanguageMapper.mjs'
-import { ALL_LANGUAGES, BOKMAAL, ENGLISH, GERMAN, UNDEFINED_LANGUAGE } from '../LanguageConstants.mjs'
+import { ALL_LANGUAGES, BOKMAAL, ENGLISH, GERMAN, MULTIPLE, UNDEFINED_LANGUAGE } from '../LanguageConstants.mjs'
 import chai from 'chai'
 const expect = chai.expect
 
@@ -62,5 +62,13 @@ describe('String values exist', () => {
 
   it('should return undefined when input is unknown URI', () => {
     expect(getLanguageByUri('http://example.org/spambot')).to.equal(UNDEFINED_LANGUAGE)
+  })
+
+  it('should return Multiple Languages when input is Miscellaneous Languages', () => {
+    expect(getLanguageByIso6392Code('mis')).to.equal(MULTIPLE)
+    expect(getLanguageByUri('http://lexvo.org/id/iso639-3/mis')).to.equal(MULTIPLE)
+    expect(getLanguageByEnglishName('Miscellaneous Language')).to.equal(MULTIPLE)
+    expect(getLanguageByBokmaalName('annet språk')).to.equal(MULTIPLE)
+    expect(getLanguageByNynorskName('anna språk')).to.equal(MULTIPLE)
   })
 })
