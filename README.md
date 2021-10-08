@@ -1,9 +1,9 @@
-# nva-language-js
+# nva\-language\-js
 Javascript implementation of NVA (the Norwegian national research archive) language handling.
 
 Languages in NVA are represented by URIs, this module allows users to find the correct URI for a language and find a name string in a given language for each URI without dereferencing the URI.
 
-NVA-language also routes non-preferred representations to preferred representations.
+NVA\-language also routes non\-preferred representations to preferred representations.
 
 ## Using the library
 
@@ -46,10 +46,10 @@ All functions return a language object, which has the structure:
 
 The properties are structured as follows:
 
--   uri: a Lexvo ISO 639-3 uri
--   iso6391Code: an ISO 639-1, two-letter code
--   iso6392Codes: an array containing ISO 639-2 B/T three-letter codes (min one, max. two items)
--   iso6393Code: an ISO 639-3 code
+-   uri: a Lexvo ISO 639\-3 uri
+-   iso6391Code: an ISO 639\-1, two\-letter code
+-   iso6392Codes: an array containing ISO 639\-2 B/T three\letter codes (min one, max. two items)
+-   iso6393Code: an ISO 639\-3 code
 -   eng: the English name of the language
 -   nob: the Norwegian Bokmål name of the language
 -   nno: the Norwegian Nynorsk name of the language
@@ -57,7 +57,7 @@ The properties are structured as follows:
 
 ## Available functions
 
-There are a number of methods provided by nva-language, all of which return a Language object, these have self-explanatory names:
+There are a number of methods provided by nva\-language, all of which return a Language object, these have self\-explanatory names:
 
 -   getLanguageByBokmaalName
     -   example: `const english = getLanguageByBokmaalName('Engelsk')`
@@ -69,29 +69,29 @@ There are a number of methods provided by nva-language, all of which return a La
     -   Matching is not case\-sensitive
 -   getLanguageByIso6391Code
     -   example: `const english = getLanguageByIso6391Code('en')`
-    -   Given an ISO 639-1 code, returns a Language object that either matches the token, or is the Undefined language
-    -   Matching is not case-sensitive
+    -   Given an ISO 639\-1 code, returns a Language object that either matches the token, or is the Undefined language
+    -   Matching is not case\-sensitive
 -   getLanguageByIso6392Code
     -   example: `const english = getLanguageByIso6392Code('eng')`
-    -   Given an ISO 639-2 code, returns a Language object that either matches the token, or is the Undefined language
+    -   Given an ISO 639\-2 code, returns a Language object that either matches the token, or is the Undefined language
     -   Returns e.g. a Language object for German if either the B/T ("ger", "deu") variants are supplied
-    -   Matching is not case-sensitive
+    -   Matching is not case\-sensitive
 -   getLanguageByIso6393Code
     -   example: `const english = getLanguageByIso6393Code('eng')`
-    -   Given an ISO 639-1 code, returns a Language object that either matches the token, or is the Undefined language
-    -   Matching is not case-sensitive
+    -   Given an ISO 639\-1 code, returns a Language object that either matches the token, or is the Undefined language
+    -   Matching is not case\-sensitive
 -   getLanguageByNynorskName
     -   example: `const english = getLanguageByNynorskName('Engelsk')`
     -   Given a Norwegian Nynorsk token for a language, say "Engelsk", returns a Language object that either matches the token, or is the Undefined language
-    -   Matching is not case-sensitive
+    -   Matching is not case\-sensitive
     -   The only difference between getLanguageByNynorskName and getLanguageByBokmaalName is Bokmål "Flere språk", Nynorsk "Fleire språk"
 -   getLanguageBySamiName
     -   example: `const english = getLanguageBySamiName('Eaŋgalsgiella')`
     -   Given a Northern Sami token for a language, say "Eaŋgalsgiella", returns a Language object that either matches the token, or is the Undefined language
-    -   Matching is not case-sensitive
+    -   Matching is not case\-sensitive
 -   getLanguageByUri
     -   example: `const english = getLanguageByUri(' http://lexvo.org/id/iso639-3/eng')`
-    -   Given a Lexvo ISO 639-3 URI, returns the corresponding language object or Undefined language (in the case that the URI is not in use)
+    -   Given a Lexvo ISO 639\-3 URI, returns the corresponding language object or Undefined language (in the case that the URI is not in use)
     -   Note: Lexvo does *not* use HTTPS
 
 ## Notes
@@ -113,4 +113,4 @@ Since the primary source for the data for this module has been NSD DBH's publica
 
 ### More than one language
 
-We use the ISO 639-3 `mul` code for these cases, which replaces the sometimes-used `mis` code if provided as input.
+We use the ISO 639\-3 `mul` code for these cases, which replaces the sometimes\-used `mis` code if provided as input.
