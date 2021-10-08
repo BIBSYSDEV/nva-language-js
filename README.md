@@ -59,37 +59,37 @@ The properties are structured as follows:
 
 There are a number of methods provided by nva-language, all of which return a Language object, these have self-explanatory names:
 
-- getLanguageByBokmaalName
+-   getLanguageByBokmaalName
     -   example: `const english = getLanguageByBokmaalName('Engelsk')`
     -   Given a Norwegian Bokmål token for a language, say "Engelsk", returns a Language object that either matches the token, or is the Undefined language
     -   Matching is not case-sensitive
-- getLanguageByEnglishName
+-   getLanguageByEnglishName
     -   example: `const english = getLanguageByEnglishName('English')`
     -   Given a Norwegian Bokmål token for a language, say "English", returns a Language object that either matches the token, or is the Undefined language
     -   Matching is not case-sensitive
-- getLanguageByIso6391Code
+-   getLanguageByIso6391Code
     -   example: `const english = getLanguageByIso6391Code('en')`
     -   Given an ISO 639-1 code, returns a Language object that either matches the token, or is the Undefined language
     -   Matching is not case-sensitive
-- getLanguageByIso6392Code
+-   getLanguageByIso6392Code
     -   example: `const english = getLanguageByIso6392Code('eng')`
     -   Given an ISO 639-2 code, returns a Language object that either matches the token, or is the Undefined language
     -   Returns e.g. a Language object for German if either the B/T ("ger", "deu") variants are supplied
     -   Matching is not case-sensitive
-- getLanguageByIso6393Code
+-   getLanguageByIso6393Code
     -   example: `const english = getLanguageByIso6393Code('eng')`
     -   Given an ISO 639-1 code, returns a Language object that either matches the token, or is the Undefined language
     -   Matching is not case-sensitive
-- getLanguageByNynorskName
+-   getLanguageByNynorskName
     -   example: `const english = getLanguageByNynorskName('Engelsk')`
     -   Given a Norwegian Nynorsk token for a language, say "Engelsk", returns a Language object that either matches the token, or is the Undefined language
     -   Matching is not case-sensitive
     -   The only difference between getLanguageByNynorskName and getLanguageByBokmaalName is Bokmål: "Flere språk", Nynorsk "Fleire språk"
-- getLanguageBySamiName
+-   getLanguageBySamiName
     -   example: `const english = getLanguageBySamiName('Eaŋgalsgiella')`
     -   Given a Northern Sami token for a language, say "Eaŋgalsgiella", returns a Language object that either matches the token, or is the Undefined language
     -   Matching is not case-sensitive
-- getLanguageByUri
+-   getLanguageByUri
     -   example: `const english = getLanguageByUri(' http://lexvo.org/id/iso639-3/eng')`
     -   Given a Lexvo ISO 639-3 URI, returns the corresponding language object or Undefined language (in the case that the URI is not in use)
     -   Note: Lexvo does *not* use HTTPS
@@ -113,4 +113,4 @@ Since the primary source for the data for this module has been NSD DBH's publica
 
 ### More than one language
 
-We use the ISO 639-3 `mul` code for these cases, which is preferred over the sometimes used `mis` code.
+We use the ISO 639-3 `mul` code for these cases, which replaces the sometimes-used `mis` code if provided as input.
