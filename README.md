@@ -24,7 +24,14 @@ or
 Use with:
 
 ```javascript
-    const english = getLanguageByBokmaalName('Engelsk')
+    const bokmaal = getLanguageByBokmaalName('Engelsk')
+    const english = getLanguageByEnglishName("English")
+    const iso6391 = getLanguageByIso6391Code("en")
+    const iso6392 = getLanguageByIso6392Code("eng")
+    const iso6393 = getLanguageByIso6393Code("eng")
+    const nynorsk = getLanguageByNynorskName("Engelsk")
+    const sami = getLanguageBySamiName("Eaŋgalsgiella")
+    const uri = getLanguageByUri('http://lexvo.org/id/iso639-3/eng')
 ```
 
 ## The language object
@@ -103,13 +110,14 @@ There are a number of methods provided by nva-language, all of which return a La
 -   Given a Northern Sami token for a language, say "Eaŋgalsgiella", returns a Language object that either matches the token, or is the Undefined language
 -   Matching is not case sensitive
 
-## getLanguageByUri
+### getLanguageByUri
 
--   example: `const english = getLanguageByUri(' http://lexvo.org/id/iso639-3/eng')`
+-   example: `const english = getLanguageByUri('http://lexvo.org/id/iso639-3/eng')`
 -   Given a Lexvo ISO 639-3 URI, returns the corresponding language object or Undefined language (in the case that the URI is not in use)
 -   Note: Lexvo does *not* use HTTPS
 
 ## Notes
+
 ### Valid and invalid languages
 
 The languages supported in NVA are limited to the core languages used in Norwegian research publications, the list grows over time, but the list is still not long.
