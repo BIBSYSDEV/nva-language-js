@@ -14,6 +14,7 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     - run: npm run coverage
+    - run: ls coverage
 # Disabling for now since codaacy-coverage-reporter does not currently support ECMAScript modules
 #    - name: codacy-coverage-reporter
 #      uses: codacy/codacy-coverage-reporter-action@v1.1.0
