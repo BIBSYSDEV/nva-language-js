@@ -1,3 +1,7 @@
 {
-  "reporter": ["cobertura", "text"]
+  "reporter": ["cobertura", "text"],
+  "src": "src",
+  "lines": 100,
+  "branches": 100,
+  "statements": 100
 }
