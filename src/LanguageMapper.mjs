@@ -5,7 +5,7 @@ const convertString = string => string !== null ? string.trim().toLowerCase() : 
 const replaceNorwegian = language => NORWEGIAN === language ? BOKMAAL : language
 const replaceMiscellaneous = language => MISCELLANEOUS === language ? MULTIPLE : language
 
-const stripNonAZ = string => string.replaceAll(/[^a-zæøå]+/g, '')
+const stripNonAZ = string => string.replaceAll(/[^a-zæøåáčđŋšŧž]+/g, '')
 const isSameNaturalLanguageString = (a, b) => stripNonAZ(convertString(a)) === stripNonAZ(convertString(b))
 
 const mappedValue = language => {
