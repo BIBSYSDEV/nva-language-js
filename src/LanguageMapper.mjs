@@ -5,6 +5,9 @@ const convertString = string => string !== null ? string.trim().toLowerCase() : 
 const replaceNorwegian = language => NORWEGIAN === language ? BOKMAAL : language
 const replaceMiscellaneous = language => MISCELLANEOUS === language ? MULTIPLE : language
 
+const stripNonAZ = string => string.replaceAll(/[^a-z]+/g, '')
+const isSameNaturalLanguageString = (a, b) => stripNonAZ(convertString(a)) === stripNonAZ(convertString(b))
+
 const mappedValue = language => {
   return (language === null || language === undefined)
     ? UNDEFINED_LANGUAGE
@@ -24,19 +27,19 @@ export const getLanguageByIso6393Code = code => mappedValue(
 )
 
 export const getLanguageByEnglishName = name => mappedValue(
-  ALL_LANGUAGES.find(language => convertString(name) === language.eng.toLowerCase())
+  ALL_LANGUAGES.find(language => isSameNaturalLanguageString(language.eng.toLowerCase(), convertString(name)))
 )
 
 export const getLanguageByBokmaalName = name => mappedValue(
-  ALL_LANGUAGES.find(language => convertString(name) === language.nob.toLowerCase())
+  ALL_LANGUAGES.find(language => isSameNaturalLanguageString(language.nob.toLowerCase(), convertString(name)))
 )
 
 export const getLanguageByNynorskName = name => mappedValue(
-  ALL_LANGUAGES.find(language => convertString(name) === language.nno.toLowerCase())
+  ALL_LANGUAGES.find(language => isSameNaturalLanguageString(language.nno.toLowerCase(), convertString(name)))
 )
 
 export const getLanguageBySamiName = name => mappedValue(
-  ALL_LANGUAGES.find(language => convertString(name) === language.sme.toLowerCase())
+  ALL_LANGUAGES.find(language => isSameNaturalLanguageString(language.sme.toLowerCase(), convertString(name)))
 )
 
 export const getLanguageByUri = (uri) => mappedValue(
