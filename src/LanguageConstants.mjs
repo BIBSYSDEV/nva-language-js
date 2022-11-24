@@ -1,7 +1,7 @@
 import Language from './Language.mjs'
 
 export const AFRIKAANS = Language('af', ['afr'], 'afr', 'Afrikaans', 'Afrikaans', 'Afrikaans', 'Afrikánsagiella')
-export const BOKMAAL = Language('nb', ['nob'], 'nob', 'Bokmål', 'Bokmål', 'Bokmål', 'Girjedárogiella')
+export const BOKMAAL = Language('nb', ['nob'], 'nob', 'Norwegian, bokmål', 'Norsk, bokmål', 'Norsk, bokmål', 'Dárogiella, girjedárogiella')
 export const BULGARIAN = Language('bg', ['bul'], 'bul', 'Bulgarian', 'Bulgarsk', 'Bulgarsk', 'Bulgáriagiella')
 export const CATALAN = Language('ca', ['cat'], 'car', 'Catalan', 'Katalansk', 'Katalansk', 'Katalánagiella')
 export const CHINESE = Language('zh', ['zho', 'chi'], 'zho', 'Chinese', 'Kinesisk', 'Kinesisk', 'Kiinnágiella')
@@ -18,7 +18,7 @@ export const ITALIAN = Language('it', ['ita'], 'ita', 'Italian', 'Italiensk', 'I
 export const HUNGARIAN = Language('hu', ['hun'], 'hun', 'Hungarian', 'Ungarsk', 'Ungarsk', 'Ungárgiella')
 export const MISCELLANEOUS = Language(null, ['mis'], 'mis', 'Miscellaneous language', 'Annet språk', 'Anna språk')
 export const MULTIPLE = Language(null, ['mul'], 'mul', 'Multiple languages', 'Flere språk', 'Fleire språk', 'gielat')
-export const NYNORSK = Language('nn', ['nno'], 'nno', 'Nynorsk', 'Nynorsk', 'Nynorsk', 'Ođđadárogiella')
+export const NYNORSK = Language('nn', ['nno'], 'nno', 'Norwegian, nynorsk', 'Norsk, nynorsk', 'Norsk, nynorsk', 'Dárogiella, ođđadárogiella')
 export const NORWEGIAN = Language('no', ['nor'], 'nor', 'Norwegian', 'Norsk', 'Norsk', 'Dárogiella')
 export const POLISH = Language('pl', ['pol'], 'pol', 'Polish', 'Polsk', 'Polsk', 'Polskkagiella')
 export const PORTUGUESE = Language('pt', ['por'], 'por', 'Portuguese', 'Portugisisk', 'Portugisisk', 'Portugálagiella')

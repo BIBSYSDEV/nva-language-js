@@ -1,4 +1,5 @@
 import { describe, it } from 'mocha'
+
 import {
   getLanguageByBokmaalName,
   getLanguageByEnglishName,
@@ -9,12 +10,20 @@ import {
   getLanguageBySamiName,
   getLanguageByUri
 } from '../LanguageMapper.mjs'
-import { ALL_LANGUAGES, BOKMAAL, ENGLISH, GERMAN, MULTIPLE, UNDEFINED_LANGUAGE } from '../LanguageConstants.mjs'
+import {
+  ALL_LANGUAGES,
+  BOKMAAL,
+  ENGLISH,
+  GERMAN,
+  MULTIPLE,
+  NYNORSK,
+  UNDEFINED_LANGUAGE
+} from '../LanguageConstants.mjs'
 import chai from 'chai'
 const expect = chai.expect
 
 describe('String values exist', () => {
-  it('should return expected URI"', () => {
+  it('should return expected URI', () => {
     ALL_LANGUAGES.forEach(language =>
       expect(language.uri).to.equal('http://lexvo.org/id/iso639-3/' + language.iso6393Code)
     )
@@ -70,5 +79,16 @@ describe('String values exist', () => {
     expect(getLanguageByEnglishName('Miscellaneous Language')).to.equal(MULTIPLE)
     expect(getLanguageByBokmaalName('annet språk')).to.equal(MULTIPLE)
     expect(getLanguageByNynorskName('anna språk')).to.equal(MULTIPLE)
+  })
+
+  it('should return Norwegian written standard when input is one of the possible representations', () => {
+    const cases = [
+      { nob: 'Norsk (bokmål)', nno: 'Norsk (bokmål)', eng: 'Norwegian (bokmål)', sme: 'Dárogiella (girjedárogiella)', expected: BOKMAAL },
+      { nob: 'Norsk, nynorsk', nno: 'Norsk, nynorsk', eng: 'Norwegian, nynorsk', sme: 'Dárogiella, ođđadárogiella', expected: NYNORSK }
+    ]
+    cases.forEach(item => expect(getLanguageByBokmaalName(item.nob)).to.equal(item.expected))
+    cases.forEach(item => expect(getLanguageByNynorskName(item.nno)).to.equal(item.expected))
+    cases.forEach(item => expect(getLanguageByEnglishName(item.eng)).to.equal(item.expected))
+    cases.forEach(item => expect(getLanguageBySamiName(item.sme)).to.equal(item.expected))
   })
 })
