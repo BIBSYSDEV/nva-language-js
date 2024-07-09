@@ -1,11 +1,11 @@
-import { describe, it } from 'mocha'
+import {describe, it} from 'mocha'
 
 import {
   getLanguageByBokmaalName,
   getLanguageByEnglishName,
   getLanguageByIso6391Code,
   getLanguageByIso6392Code,
-  getLanguageByIso6393Code,
+  getLanguageByIso6393Code, getLanguageByIso6395Code,
   getLanguageByNynorskName,
   getLanguageBySamiName,
   getLanguageByUri
@@ -17,9 +17,11 @@ import {
   GERMAN,
   MULTIPLE,
   NYNORSK,
-  UNDEFINED_LANGUAGE
+  UNDEFINED_LANGUAGE,
+  SAMI_LANGUAGES
 } from '../LanguageConstants.mjs'
 import chai from 'chai'
+
 const expect = chai.expect
 
 describe('String values exist', () => {
@@ -81,14 +83,19 @@ describe('String values exist', () => {
     expect(getLanguageByNynorskName('anna språk')).to.equal(MULTIPLE)
   })
 
-  it('should return Norwegian written standard when input is one of the possible representations', () => {
+  it('should return Norwegian written standard when  input is one of the possible representations', () => {
     const cases = [
       { nob: 'Norsk (bokmål)', nno: 'Norsk (bokmål)', eng: 'Norwegian (bokmål)', sme: 'Dárogiella (girjedárogiella)', expected: BOKMAAL },
-      { nob: 'Norsk, nynorsk', nno: 'Norsk, nynorsk', eng: 'Norwegian, nynorsk', sme: 'Dárogiella, ođđadárogiella', expected: NYNORSK }
+      { nob: 'Norsk, nynorsk', nno: 'Norsk, nynorsk', eng: 'Norwegian, nynorsk', sme: 'Dárogiella, ođđadárogiella', expected: NYNORSK },
+      { nob: 'Samisk språk', nno: 'Samisk språk', eng: 'Sami languages', sme: 'Sámegielat', expected: SAMI_LANGUAGES }
     ]
     cases.forEach(item => expect(getLanguageByBokmaalName(item.nob)).to.equal(item.expected))
     cases.forEach(item => expect(getLanguageByNynorskName(item.nno)).to.equal(item.expected))
     cases.forEach(item => expect(getLanguageByEnglishName(item.eng)).to.equal(item.expected))
     cases.forEach(item => expect(getLanguageBySamiName(item.sme)).to.equal(item.expected))
+  })
+
+  it('should return sami language group when input is iso 639-5', () => {
+    expect(getLanguageByIso6395Code('smi')).equal(SAMI_LANGUAGES)
   })
 })

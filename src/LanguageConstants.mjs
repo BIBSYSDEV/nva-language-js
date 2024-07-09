@@ -1,4 +1,5 @@
 import Language from './Language.mjs'
+import LanguageGroup from "./LanguageGroup.mjs";
 
 export const AFRIKAANS = Language('af', ['afr'], 'afr', 'Afrikaans', 'Afrikaans', 'Afrikaans', 'Afrikánsagiella')
 export const BOKMAAL = Language('nb', ['nob'], 'nob', 'Norwegian, bokmål', 'Norsk, bokmål', 'Norsk, bokmål', 'Dárogiella, girjedárogiella')
@@ -33,6 +34,7 @@ export const ENARE_SAMI = Language(null, [], 'snn', 'Enare sami', 'Enaresamisk',
 export const KILDIN_SAMI = Language(null, [], 'sjd', 'Kildin sami', 'Kildinsamisk', 'Kildinsamisk', 'Gielddasámegiella')
 export const SWEDISH = Language('sv', ['swe'], 'swe', 'Swedish', 'Svensk', 'Svensk', 'Ruoŧagiella')
 export const UNDEFINED_LANGUAGE = Language(null, ['und'], 'und', 'Unknown language', 'Ukjent språk', 'Ukjent språk', 'Dovdameahttun giella')
+export const SAMI_LANGUAGES = LanguageGroup('smi', 'Sami languages', 'Samisk språk', 'Samisk språk', 'Sámegielat');
 export const ALL_LANGUAGES = Object.freeze([
   UNDEFINED_LANGUAGE,
   ENGLISH,
@@ -66,5 +68,6 @@ export const ALL_LANGUAGES = Object.freeze([
   CHINESE,
   POLISH,
   CZECH,
-  HUNGARIAN
+  HUNGARIAN,
+  SAMI_LANGUAGES
 ])

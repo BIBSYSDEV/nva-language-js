@@ -39,7 +39,11 @@ export const getLanguageByNynorskName = name => mappedValue(
 )
 
 export const getLanguageBySamiName = name => mappedValue(
-  ALL_LANGUAGES.find(language => isSameNaturalLanguageString(language.sme.toLowerCase(), convertString(name)))
+  ALL_LANGUAGES.find(language => isSameNaturalLanguageString(language.sme ? language.sme.toLowerCase() : '', convertString(name)))
+)
+
+export const getLanguageByIso6395Code = code => mappedValue(
+  ALL_LANGUAGES.find(language => convertString(code) === language.iso6395Code)
 )
 
 export const getLanguageByUri = (uri) => mappedValue(
