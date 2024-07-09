@@ -24,7 +24,13 @@ export const POLISH = Language('pl', ['pol'], 'pol', 'Polish', 'Polsk', 'Polsk',
 export const PORTUGUESE = Language('pt', ['por'], 'por', 'Portuguese', 'Portugisisk', 'Portugisisk', 'Portugálagiella')
 export const RUSSIAN = Language('ru', ['rus'], 'rus', 'Russian', 'Russisk', 'Russisk', 'Ruoššagiella')
 export const SPANISH = Language('es', ['spa'], 'spa', 'Spanish', 'Spansk', 'Spansk', 'Spánskkagiella')
-export const SAMI = Language('se', [], 'sme', 'Sami', 'Samisk', 'Samisk', 'Davvisámegiella')
+export const NORTHERN_SAMI = Language('se', [], 'sme', 'Northern sami', 'Nordsamisk', 'Nordsamisk', 'Davvisámegiella')
+export const SOUTHERN_SAMI = Language(null, [], 'sma', 'Southern sami', 'Sørsamisk', 'Sørsamisk', 'Lullisámegiella')
+export const LULE_SAMI = Language(null, [], 'smj', 'Lule sami', 'Lulesamisk', 'Lulesamisk', 'Julevsámegiella')
+export const PITE_SAMI = Language(null, [], 'sje', 'Pite sami', 'Pitesamisk', 'Pitesamisk', 'Bihtánsámegiella')
+export const SKOLT_SAMI = Language(null, [], 'sms', 'Skolt sami', 'Skoltesamisk', 'Skoltesamisk', 'Nuortasámegiella')
+export const ENARE_SAMI = Language(null, [], 'snn', 'Enare sami', 'Enaresamisk', 'Enaresamisk', 'Anársámegiella')
+export const KILDIN_SAMI = Language(null, [], 'sjd', 'Kildin sami', 'Kildinsamisk', 'Kildinsamisk', 'Gielddasámegiella')
 export const SWEDISH = Language('sv', ['swe'], 'swe', 'Swedish', 'Svensk', 'Svensk', 'Ruoŧagiella')
 export const UNDEFINED_LANGUAGE = Language(null, ['und'], 'und', 'Unknown language', 'Ukjent språk', 'Ukjent språk', 'Dovdameahttun giella')
 export const ALL_LANGUAGES = Object.freeze([
@@ -38,7 +44,13 @@ export const ALL_LANGUAGES = Object.freeze([
   SWEDISH,
   SPANISH,
   GERMAN,
-  SAMI,
+  NORTHERN_SAMI,
+  SOUTHERN_SAMI,
+  LULE_SAMI,
+  PITE_SAMI,
+  SKOLT_SAMI,
+  ENARE_SAMI,
+  KILDIN_SAMI,
   FRENCH,
   MULTIPLE,
   DUTCH,
