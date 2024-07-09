@@ -27,12 +27,12 @@ const expect = chai.expect
 describe('String values exist', () => {
   it('should return expected URI', () => {
     ALL_LANGUAGES.forEach(language => {
-        if (language.iso6393Code !== null) {
-          expect(language.uri).to.contain('http://lexvo.org/id/iso639-3/' + language.iso6393Code)
-        } else {
-          expect(language.uri).to.contain('http://lexvo.org/id/iso639-5/' + language.iso6395Code)
-        }
+      if (language.iso6393Code !== null) {
+        expect(language.uri).to.contain('http://lexvo.org/id/iso639-3/' + language.iso6393Code)
+      } else {
+        expect(language.uri).to.contain('http://lexvo.org/id/iso639-5/' + language.iso6395Code)
       }
+    }
     )
   })
 
