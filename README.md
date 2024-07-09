@@ -132,7 +132,7 @@ Using a term associated with "Norwegian" will return "Bokmål". No offense is in
 
 ### Sami
 
-Since the primary source for the data for this module has been NSD DBH's publication channel data, a choice was made to map all "Samisk" to Northern Sami. This is unfortunate, but it solves the issue in view of a lack of Sami language skills. Sorry about that.
+See [NVA's technical notes regarding languages]('https://github.com/BIBSYSDEV/nva-language?tab=readme-ov-file#representing-sami-languages')
 
 ### More than one language
 

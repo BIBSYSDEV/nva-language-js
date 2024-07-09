@@ -6,6 +6,7 @@ import {
   getLanguageByIso6391Code,
   getLanguageByIso6392Code,
   getLanguageByIso6393Code,
+  getLanguageByIso6395Code,
   getLanguageByNynorskName,
   getLanguageBySamiName,
   getLanguageByUri
@@ -17,15 +18,22 @@ import {
   GERMAN,
   MULTIPLE,
   NYNORSK,
-  UNDEFINED_LANGUAGE
+  UNDEFINED_LANGUAGE,
+  SAMI_LANGUAGES
 } from '../LanguageConstants.mjs'
 import chai from 'chai'
+
 const expect = chai.expect
 
 describe('String values exist', () => {
   it('should return expected URI', () => {
-    ALL_LANGUAGES.forEach(language =>
-      expect(language.uri).to.equal('http://lexvo.org/id/iso639-3/' + language.iso6393Code)
+    ALL_LANGUAGES.forEach(language => {
+      if (language.iso6393Code !== null) {
+        expect(language.uri).to.contain('http://lexvo.org/id/iso639-3/' + language.iso6393Code)
+      } else {
+        expect(language.uri).to.contain('http://lexvo.org/id/iso639-5/' + language.iso6395Code)
+      }
+    }
     )
   })
 
@@ -84,11 +92,16 @@ describe('String values exist', () => {
   it('should return Norwegian written standard when input is one of the possible representations', () => {
     const cases = [
       { nob: 'Norsk (bokmål)', nno: 'Norsk (bokmål)', eng: 'Norwegian (bokmål)', sme: 'Dárogiella (girjedárogiella)', expected: BOKMAAL },
-      { nob: 'Norsk, nynorsk', nno: 'Norsk, nynorsk', eng: 'Norwegian, nynorsk', sme: 'Dárogiella, ođđadárogiella', expected: NYNORSK }
+      { nob: 'Norsk, nynorsk', nno: 'Norsk, nynorsk', eng: 'Norwegian, nynorsk', sme: 'Dárogiella, ođđadárogiella', expected: NYNORSK },
+      { nob: 'Samisk språk', nno: 'Samisk språk', eng: 'Sami languages', sme: 'Sámegielat', expected: SAMI_LANGUAGES }
     ]
     cases.forEach(item => expect(getLanguageByBokmaalName(item.nob)).to.equal(item.expected))
     cases.forEach(item => expect(getLanguageByNynorskName(item.nno)).to.equal(item.expected))
     cases.forEach(item => expect(getLanguageByEnglishName(item.eng)).to.equal(item.expected))
     cases.forEach(item => expect(getLanguageBySamiName(item.sme)).to.equal(item.expected))
+  })
+
+  it('should return sami language group when input is iso 639-5', () => {
+    expect(getLanguageByIso6395Code('smi')).equal(SAMI_LANGUAGES)
   })
 })
