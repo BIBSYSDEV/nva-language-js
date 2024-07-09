@@ -89,7 +89,7 @@ describe('String values exist', () => {
     expect(getLanguageByNynorskName('anna språk')).to.equal(MULTIPLE)
   })
 
-  it('should return Norwegian written standard when  input is one of the possible representations', () => {
+  it('should return Norwegian written standard when input is one of the possible representations', () => {
     const cases = [
       { nob: 'Norsk (bokmål)', nno: 'Norsk (bokmål)', eng: 'Norwegian (bokmål)', sme: 'Dárogiella (girjedárogiella)', expected: BOKMAAL },
       { nob: 'Norsk, nynorsk', nno: 'Norsk, nynorsk', eng: 'Norwegian, nynorsk', sme: 'Dárogiella, ođđadárogiella', expected: NYNORSK },
