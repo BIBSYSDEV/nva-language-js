@@ -132,7 +132,7 @@ Using a term associated with "Norwegian" will return "Bokmål". No offense is in
 
 ### Sami
 
-See [NVA's technical notes regarding languages]('https://github.com/BIBSYSDEV/nva-language?tab=readme-ov-file#representing-sami-languages') 
+See [NVA's technical notes regarding languages]('https://github.com/BIBSYSDEV/nva-language?tab=readme-ov-file#representing-sami-languages')
 
 ### More than one language
 
