@@ -5,7 +5,8 @@ import {
   getLanguageByEnglishName,
   getLanguageByIso6391Code,
   getLanguageByIso6392Code,
-  getLanguageByIso6393Code, getLanguageByIso6395Code,
+  getLanguageByIso6393Code,
+  getLanguageByIso6395Code,
   getLanguageByNynorskName,
   getLanguageBySamiName,
   getLanguageByUri
