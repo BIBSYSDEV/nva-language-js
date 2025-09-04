@@ -1,6 +1,6 @@
 {
   "name": "nva-language",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "",
   "main": "./dist/LanguageMapper.js",
   "module": "./src/LanguageMapper.mjs",
@@ -22,8 +22,8 @@
   "author": "Rurik Thomas Greenall",
   "license": "MIT",
   "volta": {
-    "node": "20.11.0",
-    "npm": "10.4.0"
+    "node": "22.19.0",
+    "npm": "11.6.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.9",
@@ -35,6 +35,6 @@
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-node": "^11.1.0",
-    "mocha": "10.3.0"
+    "mocha": "^11.7.2"
   }
 }
