@@ -1,6 +1,6 @@
 {
   "name": "nva-language",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "",
   "main": "./dist/LanguageMapper.js",
   "module": "./src/LanguageMapper.mjs",
