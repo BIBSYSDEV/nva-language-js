@@ -21,9 +21,7 @@ import {
   UNDEFINED_LANGUAGE,
   SAMI_LANGUAGES
 } from '../LanguageConstants.mjs'
-import chai from 'chai'
-
-const expect = chai.expect
+import { expect } from 'chai'
 
 describe('String values exist', () => {
   it('should return expected URI', () => {
