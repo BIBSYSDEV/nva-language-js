@@ -1,25 +1,26 @@
 name: Node.js CI
 
-on: [push,pull_request]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
-permissions:
-  contents: read
+permissions: {}
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
-    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
-    - uses: volta-cli/action@5c175f92dea6f48441c436471e6479dbc192e194
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
-    - run: npm run coverage
-# Disabling for now since codaacy-coverage-reporter does not currently support ECMAScript modules
-#    - name: codacy-coverage-reporter
-#      uses: codacy/codacy-coverage-reporter-action@v1.1.0
-#      with:
-#        project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-#        coverage-reports: coverage/cobertura-coverage.xml
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+      - uses: volta-cli/action@5c175f92dea6f48441c436471e6479dbc192e194
+      - run: npm ci --ignore-scripts
+      - run: npm run coverage
+#     - name: codacy-coverage-reporter
+#       uses: codacy/codacy-coverage-reporter-action@<SHA>
+#       with:
+#         project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+#         coverage-reports: coverage/cobertura-coverage.xml
