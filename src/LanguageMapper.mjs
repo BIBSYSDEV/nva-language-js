@@ -1,4 +1,4 @@
-import { ALL_LANGUAGES, UNDEFINED_LANGUAGE, BOKMAAL, NORWEGIAN, MISCELLANEOUS, MULTIPLE } from './LanguageConstants.mjs'
+import { ALL_LANGUAGES, INTERNAL_LANGUAGES, UNDEFINED_LANGUAGE, BOKMAAL, NORWEGIAN, MISCELLANEOUS, MULTIPLE } from './LanguageConstants.mjs'
 
 const convertString = string => string !== null ? string.trim().toLowerCase() : ''
 
@@ -49,3 +49,5 @@ export const getLanguageByIso6395Code = code => mappedValue(
 export const getLanguageByUri = (uri) => mappedValue(
   ALL_LANGUAGES.find(language => convertString(uri) === language.uri)
 )
+
+export const getLanguages = () => ALL_LANGUAGES.filter(language => !INTERNAL_LANGUAGES.includes(language))

@@ -9,13 +9,15 @@ import {
   getLanguageByIso6395Code,
   getLanguageByNynorskName,
   getLanguageBySamiName,
-  getLanguageByUri
+  getLanguageByUri,
+  getLanguages
 } from '../LanguageMapper.mjs'
 import {
   ALL_LANGUAGES,
   BOKMAAL,
   ENGLISH,
   GERMAN,
+  INTERNAL_LANGUAGES,
   MULTIPLE,
   NYNORSK,
   UNDEFINED_LANGUAGE,
@@ -101,5 +103,11 @@ describe('String values exist', () => {
 
   it('should return sami language group when input is iso 639-5', () => {
     expect(getLanguageByIso6395Code('smi')).equal(SAMI_LANGUAGES)
+  })
+})
+
+describe('Language export', () => {
+  it('should return only non-internal languages', () => {
+    expect(getLanguages().every(language => INTERNAL_LANGUAGES.includes(language))).to.equal(false)
   })
 })
