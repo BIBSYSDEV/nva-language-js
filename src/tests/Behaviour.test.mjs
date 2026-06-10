@@ -107,6 +107,10 @@ describe('String values exist', () => {
 })
 
 describe('Language export', () => {
+  it('should return a non-empty list', () => {
+    expect(getLanguages()).to.have.length.above(0)
+  })
+
   it('should return only non-internal languages', () => {
     expect(getLanguages().every(language => INTERNAL_LANGUAGES.includes(language))).to.equal(false)
   })
