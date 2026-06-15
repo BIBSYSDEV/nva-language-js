@@ -14,9 +14,10 @@ export const FINNISH = Language('fi', ['fin'], 'fin', 'Finnish', 'Finsk', 'Finsk
 export const FRENCH = Language('fr', ['fra', 'fre'], 'fra', 'French', 'Fransk', 'Fransk', 'Fránskkagiella')
 export const GERMAN = Language('de', ['deu', 'ger'], 'deu', 'German', 'Tysk', 'Tysk', 'Duiskkagiella')
 export const GREEK = Language('el', ['gre', 'ell'], 'ell', 'Greek', 'Gresk', 'Gresk', 'Greikkagiella')
+export const HUNGARIAN = Language('hu', ['hun'], 'hun', 'Hungarian', 'Ungarsk', 'Ungarsk', 'Ungárgiella')
 export const ICELANDIC = Language('is', ['isl', 'ice'], 'isl', 'Icelandic', 'Islandsk', 'Islandsk', 'Islánddagiella')
 export const ITALIAN = Language('it', ['ita'], 'ita', 'Italian', 'Italiensk', 'Italiensk', 'Itáliagiella')
-export const HUNGARIAN = Language('hu', ['hun'], 'hun', 'Hungarian', 'Ungarsk', 'Ungarsk', 'Ungárgiella')
+export const KVEN = Language(null, [], 'fkv', 'Kven', 'Kvensk', 'Kvensk', 'Kveanagiella')
 export const MISCELLANEOUS = Language(null, ['mis'], 'mis', 'Miscellaneous language', 'Annet språk', 'Anna språk')
 export const MULTIPLE = Language(null, ['mul'], 'mul', 'Multiple languages', 'Flere språk', 'Fleire språk', 'gielat')
 export const NYNORSK = Language('nn', ['nno'], 'nno', 'Norwegian, nynorsk', 'Norsk, nynorsk', 'Norsk, nynorsk', 'Dárogiella, ođđadárogiella')
@@ -70,5 +71,6 @@ export const ALL_LANGUAGES = Object.freeze([
   POLISH,
   CZECH,
   HUNGARIAN,
-  SAMI_LANGUAGES
+  SAMI_LANGUAGES,
+  KVEN
 ])
