@@ -34,6 +34,7 @@ export const SKOLT_SAMI = Language(null, [], 'sms', 'Skolt sami', 'Skoltesamisk'
 export const ENARE_SAMI = Language(null, [], 'snn', 'Enare sami', 'Enaresamisk', 'Enaresamisk', 'Anársámegiella')
 export const KILDIN_SAMI = Language(null, [], 'sjd', 'Kildin sami', 'Kildinsamisk', 'Kildinsamisk', 'Gielddasámegiella')
 export const SWEDISH = Language('sv', ['swe'], 'swe', 'Swedish', 'Svensk', 'Svensk', 'Ruoŧagiella')
+export const UKRANIAN = Language('uk', ['ukr'], 'ukr', 'Ukranian', 'Ukrainsk', 'Ukrainsk', 'Ukrainagiella')
 export const UNDEFINED_LANGUAGE = Language(null, ['und'], 'und', 'Unknown language', 'Ukjent språk', 'Ukjent språk', 'Dovdameahttun giella')
 export const SAMI_LANGUAGES = LanguageGroup('smi', 'Sami languages', 'Samisk språk', 'Samisk språk', 'Sámegielat')
 export const INTERNAL_LANGUAGES = Object.freeze([NORWEGIAN, MISCELLANEOUS])
@@ -72,5 +73,6 @@ export const ALL_LANGUAGES = Object.freeze([
   CZECH,
   HUNGARIAN,
   SAMI_LANGUAGES,
-  KVEN
+  KVEN,
+  UKRANIAN
 ])
