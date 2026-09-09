@@ -10,6 +10,7 @@ export const CZECH = Language('cs', ['ces', 'cze'], 'ces', 'Czech', 'Tsjekkisk',
 export const DANISH = Language('da', ['dan'], 'dan', 'Danish', 'Dansk', 'Dansk', 'Dánskkagiella')
 export const DUTCH = Language('nl', ['nld', 'dut'], 'nld', 'Dutch', 'Nederlandsk', 'Nederlandsk', 'Hollánddagiella')
 export const ENGLISH = Language('en', ['eng'], 'eng', 'English', 'Engelsk', 'Engelsk', 'Eaŋgalsgiella')
+export const FAROESE = Language('fo', ['fao'], 'fao', 'Faroese', 'Færøysk', 'Færøysk', 'Fársámegiella')
 export const FINNISH = Language('fi', ['fin'], 'fin', 'Finnish', 'Finsk', 'Finsk', 'Suomagiella')
 export const FRENCH = Language('fr', ['fra', 'fre'], 'fra', 'French', 'Fransk', 'Fransk', 'Fránskkagiella')
 export const GERMAN = Language('de', ['deu', 'ger'], 'deu', 'German', 'Tysk', 'Tysk', 'Duiskkagiella')
@@ -74,5 +75,6 @@ export const ALL_LANGUAGES = Object.freeze([
   HUNGARIAN,
   SAMI_LANGUAGES,
   KVEN,
-  UKRANIAN
+  UKRANIAN,
+  FAROESE
 ])
